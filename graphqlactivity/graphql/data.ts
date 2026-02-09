@@ -4,6 +4,7 @@ export const db = [
         weather: "sunny",
         tempC: "25C",
         tempF: "70F",
+        humidity: null,
         friends: ["96814","96826"]
     },
     {
@@ -11,6 +12,7 @@ export const db = [
         weather: "sunny",
         tempC: "30C",
         tempF: "86F",
+        humidity: "80%",
         friends: ["96814","96814"]
     },
     {

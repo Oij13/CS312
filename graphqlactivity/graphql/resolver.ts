@@ -5,6 +5,7 @@ interface WeatherInterface {
     weather: string;
     tempC: string;
     tempF: string;
+    humidity?: string;
     friends: string[]
 }
 
