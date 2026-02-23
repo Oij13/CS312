@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Sample Component clicks the button and increments the count 1`] = `
+<div>
+  <h1
+    onClick={[Function]}
+  >
+    Hello, World!
+  </h1>
+  <p>
+    Count: 
+    1
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Increment
+  </button>
+</div>
+`;
+
+exports[`Sample Component clicks the h1 element and toggles the message 1`] = `
+<div>
+  <h1
+    onClick={[Function]}
+  >
+    Goodbye, World!
+  </h1>
+  <p>
+    Count: 
+    0
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Increment
+  </button>
+</div>
+`;
+
+exports[`Sample Component clicks the h1 element twice and toggles the message back 1`] = `
+<div>
+  <h1
+    onClick={[Function]}
+  >
+    Hello, World!
+  </h1>
+  <p>
+    Count: 
+    0
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Increment
+  </button>
+</div>
+`;
+
+exports[`Sample Component renders correctly 1`] = `
+<div>
+  <h1
+    onClick={[Function]}
+  >
+    Hello, World!
+  </h1>
+  <p>
+    Count: 
+    0
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Increment
+  </button>
+</div>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PageComponentWeather clicks the h1 element and updates the state 1`] = `
+<section>
+  <h1
+    onClick={[Function]}
+  >
+    Weather Clicked
+  </h1>
+</section>
+`;
+
+exports[`PageComponentWeather renders correctly 1`] = `
+<section>
+  <h1
+    onClick={[Function]}
+  >
+    Weather
+  </h1>
+</section>
+`;
