@@ -28,7 +28,7 @@ services:
       - backend
     command: "npm run dev"
     tty: true
-    user: ${MY_USER}  # Optional (step 7) - enable after scaffolding Next.js
+    user: ${MY_USER}
 
 volumes:
   mongodb_data_container:
