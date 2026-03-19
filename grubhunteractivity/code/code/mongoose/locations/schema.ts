@@ -12,3 +12,4 @@ export const locationSchema = new Schema({
 });
 
 export type Location = InferSchemaType<typeof locationSchema>;
+export type LocationType = Location;
