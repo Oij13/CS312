@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import LocationModel from "./model";
 import { Location } from "./schema";
-import { FindByIdQuery, FindByWishlistQuery } from "./custom";
+import { FindByIdQuery, FindByWishlistQuery, WishlistAction } from "./custom";
 
 type LocationDocument = mongoose.HydratedDocument<Location>;
 
@@ -13,10 +13,10 @@ export async function findAllLocations(): Promise<LocationDocument[]> {
   return findLocations({});
 }
 
-export async function findLocationById(
-  location_id: string,
+export async function findLocationsById(
+  location_ids: string[],
 ): Promise<LocationDocument[]> {
-  const query: FindByIdQuery = { location_id };
+  const query: FindByIdQuery = { location_id: { $in: location_ids } };
   return findLocations(query);
 }
 
@@ -30,14 +30,17 @@ export async function findWishlistLocations(
 export async function updateWishlist(
   location_id: string,
   userId: string,
+  action: WishlistAction,
 ): Promise<LocationDocument | null> {
   const location = await LocationModel.findOne({ location_id });
   if (!location) return null;
 
   const index = location.on_wishlist.indexOf(userId);
-  if (index === -1) {
+  if (action === "add" && index === -1) {
     location.on_wishlist.push(userId);
-  } else {
+  }
+
+  if (action === "remove" && index !== -1) {
     location.on_wishlist.splice(index, 1);
   }
 
