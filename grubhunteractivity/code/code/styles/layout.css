@@ -1,0 +1,16 @@
+.layout-grid {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .layout-grid {
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+}
