@@ -7,4 +7,14 @@ declare global {
     | undefined;
 }
 
+import { DefaultSession } from "next-auth";
+
+declare module "next-auth" {
+  interface Session {
+    user: DefaultSession["user"] & {
+      fdlst_private_userId?: string;
+    };
+  }
+}
+
 export {};
